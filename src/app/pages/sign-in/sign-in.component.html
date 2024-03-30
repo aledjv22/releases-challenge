@@ -1,7 +1,9 @@
 <div class="flex flex-col w-full items-center text-[#000C56] font-bold">
   <h1 class="text-2xl my-2">
-    Bienvenido de nuevo</h1>
-  @if(true) {
+    Bienvenido de nuevo
+  </h1>
+
+  @if(false) {
     <form
     class="flex flex-col w-80">
       <label for="email">
@@ -27,13 +29,15 @@
       </button>
     </form>
   } @else {
-    <h2 class="text-lg mb-2 mt-10">
-      Inicio de sesión exitoso.
-    </h2>
-
-    <button type="button" routerLink="/" 
-    [class]="stylesButton" class="text-white">
-      Ir al inicio
-    </button>
+    <div class="w-80 flex flex-col items-center">
+      <h2 class="text-lg mb-2 mt-10">
+        Inicio de sesión exitoso.
+      </h2>
+  
+      <button type="button" routerLink="/" 
+      [class]="stylesButton" class="text-white">
+        Ir al inicio
+      </button>
+    </div>
   }
 </div>

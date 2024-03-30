@@ -12,5 +12,5 @@ export default class SignInComponent {
 
   readonly stylesButton = `bg-gradient-to-r from-[#FD7658] to-[#FFA07A] 
   hover:bg-gradient-to-r hover:to-[#FD7658] hover:from-[#FFA07A] 
-  rounded-lg w-[300px] mb-4 py-3`;
+  rounded-lg w-full mb-4 py-3`;
 }
