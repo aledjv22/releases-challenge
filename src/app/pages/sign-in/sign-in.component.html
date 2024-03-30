@@ -9,7 +9,7 @@
       <label for="email">
         Correo:
       </label>
-      <input id="email" type="email" placeholder="ejemplo@email.com" 
+      <input id="email" type="email" placeholder="ejemplo@email.com" required
       [class]="stylesInput" autocomplete="email" formControlName="email">
 
       <label for="password">
@@ -17,7 +17,7 @@
       </label>
       <input id="password" type="password" placeholder="********"
       [class]="stylesInput" autocomplete="current-password"
-      formControlName="password">
+      formControlName="password" required>
 
       <!-- <button type="button"
       class="mb-2 underline text-[#FD7658] font-normal">
@@ -29,7 +29,14 @@
         Iniciar sesión
       </button>
     </form>
-    <button class="btn btn-info" (click)="onClick()">Login With Google</button>
+
+    <button 
+    [class]="stylesButtonGoogle"
+    (click)="onClick()">
+      <img alt="Icono de google" class="h-6 mr-2"
+      src="../../../assets/icons/google.svg">
+      Iniciar sesión con Google
+    </button>
   } @else {
     <div class="w-80 flex flex-col items-center">
       <h2 class="text-lg mb-2 mt-10">

@@ -17,6 +17,10 @@ export default class SignInComponent implements OnInit {
   hover:bg-gradient-to-r hover:to-[#FD7658] hover:from-[#FFA07A] 
   rounded-lg w-full mb-4 py-3`;
 
+  readonly stylesButtonGoogle = `hover:bg-gradient-to-r flex items-center justify-center w-80 
+  border-2 text-[#FD7658] border-[#FD7658] py-3 rounded-lg hover:text-white 
+  hover:to-[#FD7658] hover:from-[#FFA07A] hover:border-[#FFFFFF]`;
+
   formLogin: FormGroup;
 
   constructor(
