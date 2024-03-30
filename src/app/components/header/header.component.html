@@ -1,1 +1,28 @@
-<p>header works!</p>
+<nav class="w-full flex flex-wrap items-center justify-between mx-auto py-4">
+  <div class="flex items-center space-x-8">
+    <a routerLink="/" class="flex items-center ">
+      <img
+        src='../../../favicon.ico'
+        class="h-8 mr-3"
+        alt="Flowbite Logo"
+      />
+      <span class="self-center text-xl font-semibold whitespace-nowrap">
+        Releases
+      </span>
+    </a>
+  </div>
+
+  <div class="flex items-center space-x-8">
+    <input type="text" placeholder="Buscar..." 
+    class="w-72 h-8 self-center border-2 border-[#2E00C0] px-2 rounded-lg">
+  </div>
+
+  <div class="flex items-center space-x-8">
+    <button routerLink="/sign-up"
+    class="self-center text-[#FD7658] border border-[#FD7658] py-1 px-2 rounded-xl">
+      Registrar</button>
+    <button routerLink="/sign-in"
+    class="self-center bg-[#FD7658] text-white py-1 px-2 rounded-xl">
+      Iniciar sesión</button>
+  </div>
+</nav>
