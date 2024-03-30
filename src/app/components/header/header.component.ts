@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { RouterLinkWithHref } from '@angular/router';
 
 @Component({
