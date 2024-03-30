@@ -14,11 +14,21 @@
   </div>
 
   <div class="flex items-center space-x-4">
-    <button routerLink="/sign-up"
-    class="self-center text-[#FD7658] border border-[#FD7658] py-1 px-2 rounded-xl">
-      Registrar</button>
-    <button routerLink="/sign-in"
-    class="self-center bg-[#FD7658] text-white py-1 px-2 rounded-xl">
-      Iniciar sesión</button>
+    @if(!userService.isLogged()){
+      <button routerLink="/sign-up"
+      class="self-center text-[#FD7658] border border-[#FD7658] py-1 px-2 rounded-xl">
+        Registrar
+      </button>
+      <button routerLink="/sign-in"
+      class="self-center bg-[#FD7658] text-white py-1 px-2 rounded-xl">
+        Iniciar sesión
+      </button>
+    }@else {
+      <p>{{userService.user().email}}</p>
+      <button routerLink="/" (click)="onClick()"
+      class="self-center text-[#FD7658] border border-[#FD7658] py-1 px-2 rounded-xl">
+        Salir
+      </button>
+    }
   </div>
 </nav>
