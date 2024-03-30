@@ -4,31 +4,30 @@
   </h1>
 
   @if(true) {
-    <form
-    class="flex flex-col w-80">
+    <form class="flex flex-col w-80">
       <label for="firstName">
         Nombre:
       </label>
-      <input type="text" [class]="stylesInput"
-      placeholder="Ingrese su nombre"/>
+      <input id="firstName" name="firstName" type="text" [class]="stylesInput"
+      placeholder="Ingrese su nombre" autocomplete="given-name"/>
 
       <label for="lastName">
         Apellido:
       </label>
-      <input type="text" [class]="stylesInput"
-      placeholder="Ingrese su apellido"/>
+      <input id="lastName" name="lastName" type="text" [class]="stylesInput"
+      placeholder="Ingrese su apellido" autocomplete="family-name"/>
 
       <label for="email">
         Correo:
       </label>
-      <input type="email" placeholder="ejemplo@email.com" 
-      [class]="stylesInput"/>
+      <input id="email" name="email" type="email" placeholder="ejemplo@email.com" 
+      [class]="stylesInput" autocomplete="email"/>
 
       <label for="password">
         Contraseña:
       </label>
-      <input type="password" placeholder="********"
-      [class]="stylesInput"/>
+      <input id="password" name="password" type="password" placeholder="********"
+      [class]="stylesInput" autocomplete="new-password"/>
 
       <button type="submit" 
       [class]="stylesButton" class="text-white">

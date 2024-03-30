@@ -4,19 +4,18 @@
   </h1>
 
   @if(true) {
-    <form
-    class="flex flex-col w-80">
+    <form class="flex flex-col w-80">
       <label for="email">
         Correo:
       </label>
-      <input type="email" placeholder="ejemplo@email.com" 
-      [class]="stylesInput">
+      <input id="email" type="email" placeholder="ejemplo@email.com" 
+      [class]="stylesInput" autocomplete="email">
 
       <label for="password">
         Contraseña:
       </label>
-      <input type="password" placeholder="********"
-      [class]="stylesInput">
+      <input id="password" type="password" placeholder="********"
+      [class]="stylesInput" autocomplete="current-password">
 
       <button type="button"
       class="mb-2 underline text-[#FD7658] font-normal">
