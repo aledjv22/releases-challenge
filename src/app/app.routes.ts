@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 
 import  { LayoutComponent } from '@components/layout/layout.component';
 
@@ -20,9 +21,14 @@ export const routes: Routes = [
         loadComponent: () => import('@pages/sign-up/sign-up.component')
       },
       {
+        path: 'release/create',
+        loadComponent: () => import('@pages/release-create/release-create.component'),
+        ...canActivate(() => redirectUnauthorizedTo(['/sign-in']))
+      },
+      {
         path: 'release/:id',
         loadComponent: () => import('@pages/release/release.component')
-      }
+      },
     ]
   },
   {
