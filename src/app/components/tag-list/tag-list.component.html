@@ -1,0 +1,19 @@
+<aside class="w-[124px]">
+  <ul>
+    <li>
+      <a routerLink="/" routerLinkActive="font-bold" [queryParams]="{tag: 'All'}"
+      class="text-[#FD7658] hover:text-[#FFA07A] transition-colors duration-200">
+        Todas
+      </a>
+    </li>
+    @for (tag of tags; track tag) {
+    <li class="mb-2 last:mb-0">
+      <a routerLinkActive="font-bold"
+      routerLink="/" [queryParams]="{tag: tag.title}" [style.color]="tag.color"
+      class="hover:text-[#FFA07A] transition-colors duration-200">
+        {{ tag.title }}
+      </a> 
+    </li>
+    }
+  </ul>
+</aside>
