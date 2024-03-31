@@ -9,9 +9,9 @@
     @for (tag of tags; track tag) {
     <li class="mb-2 last:mb-0">
       <a routerLinkActive="font-bold"
-      routerLink="/" [queryParams]="{tag: tag.title}" [style.color]="tag.color"
-      class="hover:text-[#FFA07A] transition-colors duration-200">
-        {{ tag.title }}
+      routerLink="/" [queryParams]="{tag: tag}" 
+      class="text-[#FD7658] hover:text-[#FFA07A] transition-colors duration-200">
+        {{ tag }}
       </a> 
     </li>
     }
