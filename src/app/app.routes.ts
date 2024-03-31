@@ -26,6 +26,11 @@ export const routes: Routes = [
         ...canActivate(() => redirectUnauthorizedTo(['/sign-in']))
       },
       {
+        path: 'release/edit/:id',
+        loadComponent: () => import('@pages/release-edit/release-edit.component'),
+        ...canActivate(() => redirectUnauthorizedTo(['/sign-in']))
+      },
+      {
         path: 'release/:id',
         loadComponent: () => import('@pages/release/release.component')
       },
