@@ -45,7 +45,7 @@ export default class ReleaseEditComponent implements OnInit {
           title: release.title,
           description: release.description,
           tag: release.tag,
-          created_at: format(new Date(release.created_at), 'dd/MM/yyyy'),
+          created_at: format(new Date(release.created_at), 'yyyy-MM-dd'),
           version: release.version,
           user_email: release.user_email
         });
