@@ -49,18 +49,21 @@ export default class HomeComponent {
     .subscribe({
       next: (releases: Release[]) => {
         const queryParams = this.route.snapshot.queryParams;
-        
+
         let queryDate = queryParams['month'] ? 
         parse(queryParams['month'], 'ddMMMyy', new Date()) : null;
-  
+    
+        const queryTag = queryParams['tag'] || null;
+
         const filteredReleases = releases.filter(release => {
           const createdAt = new Date(release.created_at);
-  
+    
           return (!queryDate || 
           (createdAt.getMonth() === queryDate.getMonth() 
-          && createdAt.getFullYear() === queryDate.getFullYear()));
+          && createdAt.getFullYear() === queryDate.getFullYear())) 
+          && (!queryTag || release.tag === queryTag);
         });
-  
+    
         this.releases.set(filteredReleases);
       },
       error: () => {
