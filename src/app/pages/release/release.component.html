@@ -1,30 +1,25 @@
 <main class="w-full flex flex-col items-center">
   <section class="w-[736px]">
     <h1 class="text-[#000C56] text-[34px]/9 font-medium underline px-1">
-      Título generico extenso para la sección de actualizaciones
+      {{ release()?.title}}
     </h1>
     <div class="flex w-full justify-between text-[#0d2547] font-bold text-lg my-1 px-1">
       <h2 class="bg-[#2E00C0] rounded-lg px-2 text-white">
-        Actualización de Funcionalidades
+        {{ release()?.tag }}
       </h2>
       <h2 class="text-[#FD7658] border-2 rounded-lg px-2 border-[#FD7658]">
-        v.00.00.00
+        {{ release()?.version }}
       </h2>
     </div>
     <p class="my-1 font-medium text-[#0d2547] text-wrap px-2">
-      Descripcion:
-      El release de la versión 00.00.00 incluye las siguientes actualizaciones:
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ratione deleniti sapiente quas alias id facilis incidunt commodi consectetur. Enim ipsa perferendis sed minima. Ratione magnam debitis tempora labore odio!
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam deleniti praesentium natus, modi soluta hic labore quisquam voluptatibus nulla totam id sequi veritatis adipisci consequatur, vitae aliquid distinctio accusantium odio?
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium obcaecati pariatur repellendus soluta molestiae suscipit impedit eaque facere culpa. Sint tempora voluptates error architecto possimus ipsa accusamus iste repudiandae esse?
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est cumque deserunt excepturi dolore ducimus repellendus, ex hic possimus neque. Quae, assumenda tempora similique quis dolores a maiores ab vitae quidem?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ratione deleniti sapiente quas alias id facilis incidunt commodi consectetur. Enim ipsa perferendis sed minima. Ratione magnam debitis tempora labore odio!
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam deleniti praesentium natus, modi soluta hic labore quisquam voluptatibus nulla totam id sequi veritatis adipisci consequatur, vitae aliquid distinctio accusantium odio?  
+      {{ release()?.description }} 
     </p>
     <p class="w-full flex justify-between text-[#595959] font-semibold text-sm px-2">
-      <span>Release del 31/03/2024</span>
       <span>
-        Autor: Victor Alejandro Díaz Jáuregui
+        Release del {{ release()?.created_at | date: 'dd/MM/yyyy' }}
+      </span>
+      <span>
+        Autor: {{ release()?.user_email }}
       </span>
     </p>
   </section>
