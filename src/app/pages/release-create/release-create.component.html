@@ -1,0 +1,77 @@
+<div class="flex flex-col w-full items-center text-[#000C56] font-bold">
+  @if (!this.releaseSuccess()){
+    <h1 class="text-2xl underline">
+      Crear un nuevo release
+    </h1>
+    
+    <form [formGroup]="formRelease" (ngSubmit)="onSubmit()"
+    class="flex flex-col w-80">
+      <label for="name">
+        Nombre del release:
+      </label>
+      <input id="name" type="text" placeholder="Nombre del release" 
+      formControlName="title" [class]="stylesInput">
+      
+      <label for="description">
+        Descripción:
+      </label>
+      <textarea id="description" placeholder="Descripción del release" 
+      formControlName="description" [class]="stylesInput" class="h-40"></textarea>
+
+      <label for="tag">
+        Etiqueta:
+      </label>
+      <select id="tag" formControlName="tag" [class]="stylesInput">
+        <option value="">
+          Selecciona una opción
+        </option>
+        <option value="Corrección de Errores">
+          Corrección de Errores
+        </option>
+        <option value="Actualización de Funcionalidades">
+          Actualización de Funcionalidades
+        </option>
+        <option value="Parche de Seguridad">
+          Parche de Seguridad
+        </option>
+        <option value="Nueva Funcionalidad">
+          Nueva Funcionalidad
+        </option>
+        <option value="Lanzamiento Mayor">
+          Lanzamiento Mayor
+        </option>
+        <option value="Lanzamiento Menor">
+          Lanzamiento Menor
+        </option>
+        <option value="Lanzamiento Estable">
+          Lanzamiento Estable
+        </option>
+      </select>
+      
+      <label for="date">
+        Fecha:
+      </label>
+      <input id="date" type="date" formControlName="created_at" [class]="stylesInput">
+
+      <label for="version">
+        Versión:
+      </label>
+      <input id="version" type="text" placeholder="Versión del release" formControlName="version" [class]="stylesInput">
+      
+      <button type="submit" [class]="stylesButton" class="text-white">
+        Crear release
+      </button>
+    </form>
+  } @else {
+    <div class="w-80 flex flex-col items-center">
+      <h2 class="text-lg mb-2 mt-10">
+        Release creado con éxito.
+      </h2>
+
+      <button type="button" (click)="onClick()"
+      [class]="stylesButton" class="text-white">
+        Ir al release
+      </button>
+    </div>
+  }
+</div>
