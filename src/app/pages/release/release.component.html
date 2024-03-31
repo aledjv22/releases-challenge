@@ -1,13 +1,13 @@
 <main class="w-full flex flex-col items-center">
-  <section class="w-[736px]">
-    <h1 class="text-[#000C56] text-[34px]/9 font-medium underline px-1">
+  <section class="w-[736px] max-sm:w-[380px]">
+    <h1 class="text-[#000C56] text-[34px]/9 max-sm:text-[24px]/9 font-medium underline px-1">
       @if(release() !== null){
         {{ release()?.title}}
       } @else {
         Cargando...
       }
     </h1>
-    <div class="flex w-full justify-between text-[#0d2547] font-bold text-lg my-1 px-1">
+    <div class="flex w-full justify-between text-[#0d2547] font-bold text-lg max-sm:text-base my-1 px-1">
       <h2 class="bg-[#2E00C0] rounded-lg px-2 text-white">
         @if(release() !== null){
           {{ release()?.tag }}
