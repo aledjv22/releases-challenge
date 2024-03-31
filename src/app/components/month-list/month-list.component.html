@@ -1,7 +1,7 @@
 <aside class="w-[112px]">
   <ul>
     <li class="mb-2">
-      <a routerLink="/" routerLinkActive="font-bold" [queryParams]="{month: 'All'}"
+      <a routerLink="/" routerLinkActive="font-bold" 
       class="text-[#FD7658] hover:text-[#FFA07A] transition-colors duration-200">
         Todos
       </a>
@@ -9,9 +9,9 @@
     @for (month of months; track month) {
     <li class="mb-2 last:mb-0">
       <a routerLinkActive="font-bold"
-      routerLink="/" [queryParams]="{month: month}"
+      routerLink="/" [queryParams]="{month: month.param}"
       class="text-[#FD7658] hover:text-[#FFA07A] transition-colors duration-200">
-        {{ month }}
+        {{ month.title }}
       </a> 
     </li>
     }

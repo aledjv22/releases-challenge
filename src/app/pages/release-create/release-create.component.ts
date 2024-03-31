@@ -1,4 +1,5 @@
 import { Component, OnInit, signal } from '@angular/core';
+import { format } from 'date-fns';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 import { ReleasesService } from '@services/releases.service';
@@ -39,7 +40,11 @@ export default class ReleaseCreateComponent implements OnInit {
   ngOnInit(): void {}
 
   async onSubmit() {
-    const response = await this.releaseService.postRelease(this.formRelease.value);
+    const formData = this.formRelease.value;
+    const originalDate = new Date(formData.created_at);
+    formData.created_at = format(originalDate, 'ddMMMyy');
+  
+    const response = await this.releaseService.postRelease(formData);
     this.idRelease.set(response.id);
     this.releaseSuccess.set(this.idRelease() !== '');
   }
