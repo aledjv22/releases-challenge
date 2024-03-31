@@ -1,25 +1,49 @@
 <main class="w-full flex flex-col items-center">
   <section class="w-[736px]">
     <h1 class="text-[#000C56] text-[34px]/9 font-medium underline px-1">
-      {{ release()?.title}}
+      @if(release() !== null){
+        {{ release()?.title}}
+      } @else {
+        Cargando...
+      }
     </h1>
     <div class="flex w-full justify-between text-[#0d2547] font-bold text-lg my-1 px-1">
       <h2 class="bg-[#2E00C0] rounded-lg px-2 text-white">
-        {{ release()?.tag }}
+        @if(release() !== null){
+          {{ release()?.tag }}
+        } @else {
+          Cargando...
+        }
       </h2>
       <h2 class="text-[#FD7658] border-2 rounded-lg px-2 border-[#FD7658]">
-        {{ release()?.version }}
+        @if(release() !== null){
+          {{ release()?.version }}
+        } @else {
+          Cargando...
+        }
       </h2>
     </div>
     <p class="my-1 font-medium text-[#0d2547] text-wrap px-2">
-      {{ release()?.description }} 
+      @if (release() !== null) {
+        {{ release()?.description }} 
+      } @else {
+        Cargando...
+      } 
     </p>
     <p class="w-full flex justify-between text-[#595959] font-semibold text-sm px-2">
       <span>
-        Release del {{ release()?.created_at | date: 'dd/MM/yyyy' }}
+        @if(release() !== null){
+          Release del {{ release()?.created_at | date: 'dd/MM/yyyy' }}
+        } @else {
+          Cargando...
+        }
       </span>
       <span>
-        Autor: {{ release()?.user_email }}
+        @if(release() !== null){
+          Autor: {{ release()?.user_email }}
+        } @else {
+          Cargando...
+        }
       </span>
     </p>
   </section>
