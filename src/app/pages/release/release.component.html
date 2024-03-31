@@ -46,5 +46,19 @@
         }
       </span>
     </p>
+    @if(release() !== null) {
+      <div class="w-full flex justify-between items-center my-2 px-2">
+        <button routerLink="/"
+        class="py-1 px-2 rounded-xl text-[#fd7658] underline font-medium underline-offset-1">
+          Volver
+        </button>
+        @if (userService.user().email === release()?.user_email) {
+          <button (click)="deleteRelease()" routerLink="/"
+          class="text-[#FD7658] border border-[#FD7658] py-1 px-2 rounded-xl hover:bg-[#fd7658] hover:text-white">
+            Eliminar
+          </button>
+        }
+      </div>
+    }
   </section>
 </main>
