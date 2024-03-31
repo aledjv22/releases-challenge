@@ -4,6 +4,7 @@ import { RouterLinkWithHref } from '@angular/router';
 import { MonthListComponent } from '@components/month-list/month-list.component';
 import { TagListComponent } from '@components/tag-list/tag-list.component';
 import { CardComponent } from '@components/card/card.component';
+import { CardLoadingComponent } from '@components/card-loading/card-loading.component';
 import { UserService } from '@services/user.service';
 import { Release } from '@models/release.model';
 import { ReleasesService } from '@services/releases.service';
@@ -11,7 +12,8 @@ import { ReleasesService } from '@services/releases.service';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLinkWithHref, MonthListComponent, TagListComponent, CardComponent],
+  imports: [RouterLinkWithHref, MonthListComponent, TagListComponent, 
+    CardComponent, CardLoadingComponent],
   templateUrl: './home.component.html'
 })
 export default class HomeComponent {

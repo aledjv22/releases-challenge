@@ -2,33 +2,16 @@
   <app-month-list />
 
   @if(releases().length){
-    @for (release of releases(); track release) {
-      <section class="w-full flex flex-col items-center">
-        <app-card [release]="release"/>
-      </section>
-    }
-  } @else {
     <section class="w-full flex flex-col items-center">
-      <article
-      class="w-[600px] h-[260px] border-4 border-[#2e00c0] px-2 my-2 rounded-3xl flex flex-col">
-        <h1 class="text-[#000C56] text-[24px] font-bold underline px-1  line-clamp-1">
-          Cargando...
-        </h1>
-        <div class="flex w-full justify-between text-[#0d2547] font-medium p-1">
-          <h2 class="bg-[#2E00C0] rounded-lg px-2 text-white">
-            Cargando...
-          </h2>
-          <h2 class="text-[#FD7658] border-2 rounded-lg px-2 border-[#FD7658]">
-            Cargando...
-          </h2>
-        </div>
-        <p class="my-1 font-medium text-[#0d2547] text-wrap px-2 line-clamp-6">
-          Cargando...
-        </p>
-        <p class="w-full flex justify-end text-[#595959] font-semibold px-2 mt-auto">
-          Cargando...
-        </p>
-      </article>
+      @for (release of releases(); track release) {
+        <app-card [release]="release"/>
+      }
+    </section>
+  } @else {
+    <section class="w-full flex flex-col items-center animate-pulse">
+      <app-card-loading/>
+      <app-card-loading/>
+      <app-card-loading/>
     </section>
   }
   <app-tag-list />
