@@ -1,6 +1,7 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { format } from 'date-fns';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { RouterLinkWithHref } from '@angular/router';
 
 import { ReleasesService } from '@services/releases.service';
 import { UserService } from '@services/user.service';
@@ -8,7 +9,7 @@ import { UserService } from '@services/user.service';
 @Component({
   selector: 'app-release-create',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, RouterLinkWithHref],
   templateUrl: './release-create.component.html'
 })
 export default class ReleaseCreateComponent implements OnInit {
@@ -47,9 +48,5 @@ export default class ReleaseCreateComponent implements OnInit {
     const response = await this.releaseService.postRelease(formData);
     this.idRelease.set(response.id);
     this.releaseSuccess.set(this.idRelease() !== '');
-  }
-
-  async onClick() {
-    await this.releaseService.getReleaseById(this.idRelease());
   }
 }

@@ -53,10 +53,17 @@
           Volver
         </button>
         @if (userService.user().email === release()?.user_email) {
-          <button (click)="deleteRelease()" routerLink="/"
-          class="text-[#FD7658] border border-[#FD7658] py-1 px-2 rounded-xl hover:bg-[#fd7658] hover:text-white">
-            Eliminar
-          </button>
+          <div>
+            <button  routerLink="/release/edit/{{ release()?.id }}"
+            class="text-[#FD7658] border border-[#FD7658] py-1 px-2 rounded-xl hover:bg-[#fd7658] hover:text-white mr-2">
+              Editar
+            </button>
+
+            <button (click)="deleteRelease()" routerLink="/"
+            class="text-[#FD7658] border border-[#FD7658] py-1 px-2 rounded-xl hover:bg-[#fd7658] hover:text-white">
+              Eliminar
+            </button>
+          </div>
         }
       </div>
     }

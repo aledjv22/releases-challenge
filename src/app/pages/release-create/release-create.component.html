@@ -68,7 +68,8 @@
         Release creado con éxito.
       </h2>
 
-      <button type="button" (click)="onClick()"
+      <button type="button"
+      routerLink="/release/{{ idRelease() }}"
       [class]="stylesButton" class="text-white">
         Ir al release
       </button>

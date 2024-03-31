@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collection, addDoc, collectionData, 
-  doc, deleteDoc, getDoc } from '@angular/fire/firestore';
+import { Firestore, collection, getDoc, addDoc } from '@angular/fire/firestore';
+import { collectionData, doc, deleteDoc, updateDoc } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { Release } from '@models/release.model';
@@ -24,7 +24,6 @@ export class ReleasesService {
     const releaseDocRef = doc(this.firestore, `releases/${id}`);
     return getDoc(releaseDocRef).then(docSnap => {
       if (docSnap.exists()) {
-        this.router.navigateByUrl(`/release/${id}`);
         return { id, ...docSnap.data() } as Release;
       } else {
         throw new Error('El release no existe.');
@@ -35,6 +34,11 @@ export class ReleasesService {
   postRelease(release: Release) {
     const releaseRef = collection(this.firestore, 'releases');
     return addDoc(releaseRef, release);
+  }
+
+  async patchRelease(id: string, data: Partial<Release>) {
+    const releaseDocRef = doc(this.firestore, `releases/${id}`);
+    return updateDoc(releaseDocRef, data);
   }
 
   deleteRelease(release: Release) {
