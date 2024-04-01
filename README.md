@@ -60,6 +60,40 @@ ng serve
 
 Luego de ejecutar el comando, se podrá acceder a la aplicación en la siguiente dirección: `http://localhost:4200/`.
 
+## Imagenes:
+
+### Escritorio:
+
+![](https://i.ibb.co/m8hf2Qc/Captura-desde-2024-04-01-02-06-46.png)
+
+![](https://i.ibb.co/qmZMfbT/Captura-desde-2024-04-01-02-06-38.png)
+
+![](https://i.ibb.co/mRxQbgF/Captura-desde-2024-04-01-02-05-17.png)
+
+![](https://i.ibb.co/vJMNY2R/Captura-desde-2024-04-01-02-06-08.png)
+
+![](https://i.ibb.co/d04TTbd/Captura-desde-2024-04-01-02-07-14.png)
+
+![](https://i.ibb.co/41wvt82/Captura-desde-2024-04-01-02-07-44.png)
+
+### Celular:
+
+![](https://i.ibb.co/bm1Qnrk/Whats-App-Image-2024-04-01-at-2-29-04-AM.jpg)
+
+![](https://i.ibb.co/XsKs5K9/Whats-App-Image-2024-04-01-at-2-29-04-AM-1.jpg)
+
+![](https://i.ibb.co/Bg3G5Wk/Whats-App-Image-2024-04-01-at-2-29-04-AM-2.jpg)
+
+![](https://i.ibb.co/BztjNwH/Whats-App-Image-2024-04-01-at-2-29-04-AM-3.jpg)
+
+![](https://i.ibb.co/xYqhJPw/Whats-App-Image-2024-04-01-at-2-29-05-AM.jpg)
+
+![](https://i.ibb.co/K7MrV2Q/Whats-App-Image-2024-04-01-at-2-29-05-AM-1.jpg)
+
+![](https://i.ibb.co/SsssSwJ/Whats-App-Image-2024-04-01-at-2-31-08-AM.jpg)
+
+![](https://i.ibb.co/72ShzSs/Whats-App-Image-2024-04-01-at-2-36-29-AM.jpg)
+
 ## Autor
 
 **[Víctor Alejandro Díaz Jáuregui](https://github.com/aledjv22)**
