@@ -1,0 +1,54 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.title {
+  align-self: center;
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #000C56;
+  text-decoration: underline;
+}
+
+.secondary-button{
+  align-self: center;
+  color: #FD7658;
+  border: 1px solid #FD7658;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.secondary-button:hover {
+  background-color: #FD7658;
+  color: white;
+}
+
+.primary-button {
+  align-self: center;
+  background-color: #FD7658;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.primary-button:hover {
+  background-color: transparent;
+  color: #FD7658;
+  border: 1px solid #FD7658;
+}
+
+@media (max-width: 640px) {
+  .navbar {
+      padding-left: 4px;
+      padding-right: 4px;
+  }
+}

@@ -7,7 +7,8 @@ import { UserService } from '@services/user.service';
   selector: 'app-header',
   standalone: true,
   imports: [RouterLinkWithHref],
-  templateUrl: './header.component.html'
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.css'
 })
 export class HeaderComponent implements OnInit{
   constructor(

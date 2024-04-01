@@ -8,7 +8,8 @@ import { Release } from '@models/release.model';
   selector: 'app-card',
   standalone: true,
   imports: [RouterLinkWithHref, DatePipe],
-  templateUrl: './card.component.html'
+  templateUrl: './card.component.html',
+  styleUrl: './card.component.css'
 })
 export class CardComponent {
   @Input({required: true}) release!: Release;

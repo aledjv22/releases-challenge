@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-card-loading',
   standalone: true,
   imports: [],
-  templateUrl: './card-loading.component.html'
+  templateUrl: './card-loading.component.html',
+  styleUrl: './card-loading.component.css'
 })
 export class CardLoadingComponent {
 
