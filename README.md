@@ -67,6 +67,13 @@ Luego de ejecutar el comando, se podrá acceder a la aplicación en la siguiente
 - **[Apple](https://support.apple.com/en-us/HT201222)**
 - **[Tana (proporcionado por el director de la prueba)](https://tana.inc/releases)**
 
+## Aclaraciones
+
+- Se ha utilizado Firebase para el manejo de la autenticación y la base de datos.
+- Se ha utilizado Angular Fire para interactuar con Firebase.
+- Se ha utilizado query params para el filtrado de releases.
+- Se ha utilizado ChatGPT para la generación de ejemplos de releases. La interacción puede verla [aquí](https://chat.openai.com/share/494cd80f-3acd-4c6f-a609-dcc3c8cd19fc).
+
 ## Imagenes:
 
 ### Escritorio:
