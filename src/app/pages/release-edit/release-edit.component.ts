@@ -10,7 +10,8 @@ import { UserService } from '@services/user.service'
   selector: 'app-release-edit',
   standalone: true,
   imports: [ReactiveFormsModule, RouterLinkWithHref],
-  templateUrl: './release-edit.component.html'
+  templateUrl: './release-edit.component.html',
+  styleUrl: './release-edit.component.css'
 })
 export default class ReleaseEditComponent implements OnInit {
   @Input() id?: string;
@@ -18,12 +19,7 @@ export default class ReleaseEditComponent implements OnInit {
   editSuccess = signal(false);
 
   formRelease: FormGroup;
-  readonly stylesInput = 'bg-transparent border-2 border-[#FD7658] outline-[#FFA07A] rounded-lg w-full px-2 py-1 mb-2';
-
-  readonly stylesButton = `bg-gradient-to-r from-[#FD7658] to-[#FFA07A] 
-  hover:bg-gradient-to-r hover:to-[#FD7658] hover:from-[#FFA07A] 
-  rounded-lg w-full mt-3 py-3`;
-
+  
   constructor (
     private releaseService: ReleasesService,
     private userService: UserService

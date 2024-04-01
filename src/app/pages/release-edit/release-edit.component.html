@@ -11,39 +11,49 @@
         Nombre del release:
       </label>
       <input id="name" type="text" placeholder="Nombre del release" 
-      formControlName="title" [class]="stylesInput">
+      formControlName="title" class="stylesInput outline-[#FFA07A]">
       
       <label for="description">
         Descripción:
       </label>
       <textarea id="description" placeholder="Descripción del release" 
-      formControlName="description" [class]="stylesInput" class="h-40"></textarea>
+      formControlName="description" 
+      class="stylesInput outline-[#FFA07A] h-40"></textarea>
 
       <label for="tag">
         Etiqueta:
       </label>
-      <select id="tag" formControlName="tag" [class]="stylesInput">
+      <select id="tag" formControlName="tag" 
+      class="stylesInput outline-[#FFA07A]">
+
         <option value="">
           Selecciona una opción
         </option>
+
         <option value="Corrección de Errores">
           Corrección de Errores
         </option>
+
         <option value="Actualización de Funcionalidades">
           Actualización de Funcionalidades
         </option>
+
         <option value="Parche de Seguridad">
           Parche de Seguridad
         </option>
+
         <option value="Nueva Funcionalidad">
           Nueva Funcionalidad
         </option>
+
         <option value="Lanzamiento Mayor">
           Lanzamiento Mayor
         </option>
+
         <option value="Lanzamiento Menor">
           Lanzamiento Menor
         </option>
+        
         <option value="Lanzamiento Estable">
           Lanzamiento Estable
         </option>
@@ -52,14 +62,16 @@
       <label for="date">
         Fecha:
       </label>
-      <input id="date" type="date" formControlName="created_at" [class]="stylesInput">
+      <input id="date" type="date" formControlName="created_at" 
+      class="stylesInput outline-[#FFA07A]">
 
       <label for="version">
         Versión:
       </label>
-      <input id="version" type="text" placeholder="Versión del release" formControlName="version" [class]="stylesInput">
+      <input id="version" type="text" placeholder="Versión del release" 
+      formControlName="version" class="stylesInput outline-[#FFA07A]">
       
-      <button type="submit" [class]="stylesButton" class="text-white">
+      <button type="submit" class="stylesButton">
         Actualizar release
       </button>
     </form>
@@ -71,7 +83,7 @@
 
       <button type="button" (click)="onClick()"
       routerLink="/release/{{ id }}"
-      [class]="stylesButton" class="text-white">
+      class="stylesButton">
         Ir al release
       </button>
     </div>

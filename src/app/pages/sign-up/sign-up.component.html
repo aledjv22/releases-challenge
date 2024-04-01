@@ -11,18 +11,18 @@
         Correo:
       </label>
       <input id="email" name="email" type="email" 
-      placeholder="ejemplo@email.com" [class]="stylesInput" 
+      placeholder="ejemplo@email.com" class="stylesInput" 
       autocomplete="email" formControlName="email" required/>
 
       <label for="password">
         Contraseña:
       </label>
       <input id="password" name="password" type="password" 
-      placeholder="********" [class]="stylesInput" autocomplete="new-password" 
+      placeholder="********" class="stylesInput" autocomplete="new-password" 
       formControlName="password" required/>
 
       <button type="submit" 
-      [class]="stylesButton" class="text-white">
+      class="stylesButton">
         Crear cuenta
       </button>
     </form>
@@ -33,7 +33,7 @@
       </h2>
 
       <button type="button" routerLink="/sign-in"
-      [class]="stylesButton" class="text-white">
+      class="stylesButton">
         Iniciar sesión
       </button>
     </div>

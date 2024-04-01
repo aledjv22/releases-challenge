@@ -1,0 +1,38 @@
+.stylesButton {
+  background: linear-gradient(to right, #FD7658, #FFA07A);
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 12px 0;
+  color: white;
+}
+
+.stylesButton:hover {
+  background: linear-gradient(to right, #FFA07A, #FD7658);
+}
+
+.stylesInput {
+  background-color: transparent;
+  border: 2px solid #FD7658;
+  border-radius: 8px;
+  width: 100%;
+  padding: 4px 8px;
+  margin-bottom: 8px;
+}
+
+.stylesButtonGoogle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  border: 2px solid #FD7658;
+  color: #FD7658;
+  padding: 12px 0;
+  border-radius: 8px;
+}
+
+.stylesButtonGoogle:hover {
+  background: linear-gradient(to right, #FFA07A, #FD7658);
+  color: white;
+  border-color: #FFFFFF;
+}

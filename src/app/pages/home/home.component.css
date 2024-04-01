@@ -1,0 +1,14 @@
+.create-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #FD7658;
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.create-button:hover {
+  background-color: #FFA07A;
+}

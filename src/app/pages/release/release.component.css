@@ -1,0 +1,62 @@
+.title {
+  color: #000C56;
+  font-size: 34px;
+  line-height: 36px;
+  font-weight: 500;
+  text-decoration: underline;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.tag-version {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: #0d2547;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 4px 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.date-release {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #595959;
+  font-weight: 600;
+  font-size: 14px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.back-button {
+  padding: 4px 8px;
+  border-radius: 12px;
+  color: #fd7658;
+  text-decoration: underline;
+  font-weight: 500;
+  text-underline-offset: 1px;
+}
+
+.action-button {
+  color: #FD7658;
+  border: 1px solid #FD7658;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.action-button:hover {
+  background-color: #FD7658;
+  color: white;
+}
+@media (max-width: 640px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .tag-version {
+      font-size: 16px;
+  }
+}

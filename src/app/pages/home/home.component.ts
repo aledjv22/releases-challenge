@@ -15,17 +15,14 @@ import { ReleasesService } from '@services/releases.service';
   standalone: true,
   imports: [RouterLinkWithHref, MonthListComponent, TagListComponent, 
     CardComponent, CardLoadingComponent],
-  templateUrl: './home.component.html'
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.css'
 })
 export default class HomeComponent {
   constructor(
     public userService: UserService,
     private route: ActivatedRoute
   ) {}
-  
-  readonly stylesButton = `bg-gradient-to-r from-[#FD7658] to-[#FFA07A]
-  hover:bg-gradient-to-r hover:to-[#FD7658] hover:from-[#FFA07A]
-  rounded-lg w-full mb-4 py-3`
 
   releases = signal<Release[]>([]);
   tags = signal<string[]>([]);

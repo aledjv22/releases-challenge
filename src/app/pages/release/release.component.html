@@ -1,13 +1,13 @@
 <main class="w-full flex flex-col items-center">
   <section class="w-[736px] max-sm:w-[380px]">
-    <h1 class="text-[#000C56] text-[34px]/9 max-sm:text-[24px]/9 font-medium underline px-1">
+    <h1 class="title">
       @if(release() !== null){
         {{ release()?.title}}
       } @else {
         Cargando...
       }
     </h1>
-    <div class="flex w-full justify-between text-[#0d2547] font-bold text-lg max-sm:text-base my-1 px-1">
+    <div class="tag-version">
       <h2 class="bg-[#2E00C0] rounded-lg px-2 text-white">
         @if(release() !== null){
           {{ release()?.tag }}
@@ -30,7 +30,7 @@
         Cargando...
       } 
     </p>
-    <p class="w-full flex justify-between text-[#595959] font-semibold text-sm px-2">
+    <p class="date-release">
       <span>
         @if(release() !== null){
           Release del {{ release()?.created_at | date: 'dd/MM/yyyy' }}
@@ -49,18 +49,18 @@
     @if(release() !== null) {
       <div class="w-full flex justify-between items-center my-2 px-2">
         <button routerLink="/"
-        class="py-1 px-2 rounded-xl text-[#fd7658] underline font-medium underline-offset-1">
+        class="back-button">
           Volver
         </button>
         @if (userService.user().email === release()?.user_email) {
           <div>
             <button  routerLink="/release/edit/{{ release()?.id }}"
-            class="text-[#FD7658] border border-[#FD7658] py-1 px-2 rounded-xl hover:bg-[#fd7658] hover:text-white mr-2">
+            class="action-button mr-2">
               Editar
             </button>
 
             <button (click)="deleteRelease()" routerLink="/"
-            class="text-[#FD7658] border border-[#FD7658] py-1 px-2 rounded-xl hover:bg-[#fd7658] hover:text-white">
+            class="action-button">
               Eliminar
             </button>
           </div>

@@ -1,0 +1,21 @@
+.stylesInput {
+  background-color: transparent;
+  border: 2px solid #FD7658;
+  border-radius: 8px;
+  width: 100%;
+  padding: 4px 8px;
+  margin-bottom: 8px;
+}
+
+.stylesButton {
+  background: linear-gradient(to right, #FD7658, #FFA07A);
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px 0;
+  color: white;
+}
+
+.stylesButton:hover {
+  background: linear-gradient(to right, #FFA07A, #FD7658);
+}

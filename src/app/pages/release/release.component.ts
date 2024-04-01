@@ -10,7 +10,8 @@ import { UserService } from '@services/user.service';
   selector: 'app-release',
   standalone: true,
   imports: [RouterLinkWithHref, DatePipe],
-  templateUrl: './release.component.html'
+  templateUrl: './release.component.html',
+  styleUrl: './release.component.css'
 })
 export default class ReleaseComponent {
 
