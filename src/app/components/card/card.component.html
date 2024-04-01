@@ -1,19 +1,21 @@
 <article [routerLink]="['/release', release.id]" class="article">
-  <h1 class="text-[#000C56] text-[24px] font-bold underline px-1  line-clamp-1">
+  <h1 class="line-clamp-1 title">
     {{ release.title }}
   </h1>
-  <div class="flex w-full justify-between text-[#0d2547] font-medium p-1">
+  <div class="div">
     <h2 class="bg-[#2E00C0] rounded-lg px-2 text-white">
       {{ release.tag }}
     </h2>
-    <h2 class="text-[#FD7658] border-2 rounded-lg px-2 border-[#FD7658]">
+    <h2 
+    class="text-[#FD7658] border-2 rounded-lg px-2 border-[#FD7658]">
       v.{{ release.version }}
     </h2>
   </div>
-  <p class="my-1 font-medium text-[#0d2547] text-wrap px-2 line-clamp-6">
+  <p class="line-clamp-6 max-sm:line-clamp-3 description">
     {{ release.description }}
   </p>
-  <p class="w-full flex justify-end text-[#595959] font-semibold px-2 mt-auto">
+  <p 
+  class="date">
     Release del {{ release.created_at | date: 'dd/MM/yyyy' }}
   </p>
 </article>
