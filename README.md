@@ -60,6 +60,13 @@ ng serve
 
 Luego de ejecutar el comando, se podrá acceder a la aplicación en la siguiente dirección: `http://localhost:4200/`.
 
+## Referencias
+
+- **[TensorFlow](https://github.com/tensorflow/tensorflow/releases)**
+- **[Visual Studio Code](https://code.visualstudio.com/updates/v1_86)**
+- **[Apple](https://support.apple.com/en-us/HT201222)**
+- **[Tana (proporcionado por el director de la prueba)](https://tana.inc/releases)**
+
 ## Imagenes:
 
 ### Escritorio:
