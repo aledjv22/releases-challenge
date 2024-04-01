@@ -12,6 +12,7 @@ export class MonthListComponent {
     { title: 'Enero 24', param: '01Jan24' },
     { title: 'Febrero 24', param: '01Feb24' },
     { title: 'Marzo 24', param: '01Mar24' },
+    { title: 'Abril 24', param: '01Apr24' },
     { title: 'Enero 23', param: '01Jan23' },
     { title: 'Febrero 23', param: '01Feb23' },
     { title: 'Marzo 23', param: '01Mar23' },
